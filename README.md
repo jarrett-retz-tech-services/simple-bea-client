@@ -18,6 +18,15 @@ Other BEA client libraries exist for accessing the API. However, in my opinion, 
 
 If complicated sorting, filtering, or formatting functions are desired, they will be added as utility functions that are not part of the client module.
 
-## Examples
+## Usage
 
-Coming soon
+````
+from beasy.beasy import Bea
+API_KEY = 'C0F1CA34-149D-4D2F-90F1-11279F375B74'
+client = Bea(API_KEY)
+````
+
+**Get Dataset List**
+
+`client.getDatasetList()`
+
