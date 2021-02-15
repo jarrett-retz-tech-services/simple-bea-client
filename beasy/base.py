@@ -44,7 +44,7 @@ class Base:
         
         return r.json()
 
-    def getParameterValuesFiltered(self, targetParameter, tableName):
+    def getParameterValuesFiltered(self, targetParameter, **kwargs):
         method = 'GetParameterValuesFiltered'
 
         parameters = {
@@ -52,7 +52,7 @@ class Base:
             'method': method,
             'datasetname': self.datasetName,
             'targetparameter': targetParameter,
-            'tablename': tableName
+            **kwargs
         }
         r = requests.get(self.baseUrl, params=parameters)
         
