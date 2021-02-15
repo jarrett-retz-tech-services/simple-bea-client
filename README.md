@@ -4,7 +4,7 @@
 
 ## Installation
 
-`pip install beasy==0.0.1a2`
+`pip install beasy==0.0.1a1`
 
 ## Description
 
@@ -20,13 +20,41 @@ If complicated sorting, filtering, or formatting functions are desired, they wil
 
 ## Usage
 
+Currently, the library is designed to return JSON response objects from the BEA API, not XML.
+
 ````
 from beasy.beasy import Bea
-API_KEY = 'C0F1CA34-149D-4D2F-90F1-11279F375B74'
+API_KEY = 'your_api_key'
 client = Bea(API_KEY)
 ````
 
 **Get Dataset List**
+"...retrieves a list of the datasets currently offered."
 
 `client.getDatasetList()`
 
+**Get Parameter List**
+"...retrieves a list of the parameters(required and optional) for a particular dataset."
+
+*client.[table_name].getParameterList()*
+`client.Regional.getParameterList()`
+
+**Get Parameter Values**
+"...retrieves a list of the valid values for a particular parameter."
+
+*client.[table_name].getParameterValues(parameter)*
+`client.Regional.getParameterValues('LineCode')`
+
+**Get Parameter Values Filtered**
+"...retrieves a list of the valid values for a particular parameter based on other provided parameters."
+
+*client.[table_name].getParameterValuesFiltered(targetParameter, \*\*kwargs)*
+`client.Regional.getParameterValuesFiltered('LineCode', 'SAINC1')`
+
+
+**Get Data**
+*client.[table_name].getData(\*\*kwargs)*
+`client.Regional.getData(TableName='CAINC1',
+    LineCode='3',
+    GeoFIPS='DE',
+    Year='2014')`
