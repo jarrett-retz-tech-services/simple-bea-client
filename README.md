@@ -34,26 +34,34 @@ client = Bea(API_KEY)
 `client.getDatasetList()`
 
 **Get Parameter List**
+
 "...retrieves a list of the parameters(required and optional) for a particular dataset."
 
 *client.[table_name].getParameterList()*
+
 `client.Regional.getParameterList()`
 
 **Get Parameter Values**
+
 "...retrieves a list of the valid values for a particular parameter."
 
 *client.[table_name].getParameterValues(parameter)*
+
 `client.Regional.getParameterValues('LineCode')`
 
 **Get Parameter Values Filtered**
+
 "...retrieves a list of the valid values for a particular parameter based on other provided parameters."
 
 *client.[table_name].getParameterValuesFiltered(targetParameter, \*\*kwargs)*
+
 `client.Regional.getParameterValuesFiltered('LineCode', 'SAINC1')`
 
 
 **Get Data**
+
 *client.[table_name].getData(\*\*kwargs)*
+
 `client.Regional.getData(TableName='CAINC1',
     LineCode='3',
     GeoFIPS='DE',
