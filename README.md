@@ -28,12 +28,13 @@ API_KEY = 'your_api_key'
 client = Bea(API_KEY)
 ````
 
-**Get Dataset List**
+### **Get Dataset List**
+
 "...retrieves a list of the datasets currently offered."
 
 `client.getDatasetList()`
 
-**Get Parameter List**
+### **Get Parameter List**
 
 "...retrieves a list of the parameters(required and optional) for a particular dataset."
 
@@ -41,7 +42,7 @@ client = Bea(API_KEY)
 
 `client.Regional.getParameterList()`
 
-**Get Parameter Values**
+### **Get Parameter Values**
 
 "...retrieves a list of the valid values for a particular parameter."
 
@@ -49,7 +50,7 @@ client = Bea(API_KEY)
 
 `client.Regional.getParameterValues('LineCode')`
 
-**Get Parameter Values Filtered**
+### **Get Parameter Values Filtered**
 
 "...retrieves a list of the valid values for a particular parameter based on other provided parameters."
 
@@ -58,7 +59,7 @@ client = Bea(API_KEY)
 `client.Regional.getParameterValuesFiltered('LineCode', 'SAINC1')`
 
 
-**Get Data**
+### **Get Data**
 
 *client.[table_name].getData(\*\*kwargs)*
 
