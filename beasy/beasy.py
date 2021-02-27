@@ -1,5 +1,16 @@
 import requests
-from .tables.tables import NIPA, GDPByIndustry, Regional
+from .tables.tables import (
+    NIPA, 
+    GDPByIndustry, 
+    Regional, 
+    UnderlyingGDPbyIndustry, 
+    IIP, 
+    InputOutput, 
+    IntlServTrade,
+    ITA,
+    NIUnderlyingDetail,
+    FixedAssets,
+    MNE)
 
 class Bea:
     # TODO: Only define baseUrl in one place
@@ -11,6 +22,14 @@ class Bea:
         self.NIPA = NIPA(api_key)
         self.GDPByIndustry = GDPByIndustry(api_key)
         self.Regional = Regional(api_key)
+        self.UnderlyingGDPbyIndustry = UnderlyingGDPbyIndustry(api_key)
+        self.IIP = IIP(api_key)
+        self.InputOutput = InputOutput(api_key)
+        self.IntlServTrade = IntlServTrade(api_key)
+        self.ITA = ITA(api_key)
+        self.NIUnderlyingDetail = NIUnderlyingDetail(api_key)
+        self.FixedAssets = FixedAssets(api_key)
+        self.MNE = MNE(api_key)
 
     def getDatasetList(self):
 
