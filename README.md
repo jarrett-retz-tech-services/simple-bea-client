@@ -4,7 +4,7 @@
 
 ## Installation
 
-`pip install beasy==0.0.1a7`
+`pip install beasy==0.0.1a8`
 
 ## Description
 
