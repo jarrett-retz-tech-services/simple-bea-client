@@ -7,7 +7,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='beasy',  # Required
-    version='0.0.1a6',  # Required
+    version='0.0.1a7',  # Required
     description='Simple Python API client for accessing data on the Bureau of Economic Analysis application programming interface.',  # Optional
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
