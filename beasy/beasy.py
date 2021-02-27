@@ -1,5 +1,5 @@
 import requests
-from .tables.tables import (
+from .tables import (
     NIPA, 
     GDPByIndustry, 
     Regional, 

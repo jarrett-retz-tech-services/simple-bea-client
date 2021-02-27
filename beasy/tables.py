@@ -1,4 +1,4 @@
-from ..base import Base as BaseClass
+from .base import Base as BaseClass
 
 class NIPA(BaseClass):
     """
